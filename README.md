@@ -1,4 +1,5 @@
 # 🌿 Despertando a Consciência Ambiental
+<img width="1338" height="630" alt="image" src="https://github.com/user-attachments/assets/a789036e-5efa-4a37-b8a6-b554faf1ad6c" />
 
 **Projeto escolar — Colégio 24 de Outubro — 2° B — 2025**  
 🔗 **[Acesse Aqui](https://santosxbk.github.io/VerdeAtivo/)**  

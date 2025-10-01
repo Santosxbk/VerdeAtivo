@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despertando a Consciência Ambiental</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+  <!-- Cabeçalho -->
+  <header class="gradient-bg text-white py-4 sticky top-0 z-50 shadow-lg glass-effect">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fas fa-seedling text-2xl mr-2 floating"></i>
+        <h1 class="text-xl font-bold">Despertando a Consciência Ambiental</h1>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#intro" class="hover:text-green-200 transition-colors">Introdução</a>
+        <a href="#importance" class="hover:text-green-200 transition-colors">Importância</a>
+        <a href="#solutions" class="hover:text-green-200 transition-colors">Soluções</a>
+        <a href="#videos" class="hover:text-green-200 transition-colors">Vídeos</a>
+      </div>
+      <button class="md:hidden" id="menu-toggle">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Mobile -->
+  <div class="menu-overlay fixed inset-0 bg-black bg-opacity-50 z-50" id="menu-overlay"></div>
+  <div class="mobile-menu fixed top-0 right-0 h-full w-64 bg-green-800 text-white z-50 p-6" id="mobile-menu">
+    <div class="flex justify-between items-center mb-10">
+      <h2 class="text-xl font-bold">Menu</h2>
+      <button id="close-menu">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+    <nav class="space-y-6">
+      <a href="#intro" class="block py-2 hover:text-green-200 transition-colors">Introdução</a>
+      <a href="#importance" class="block py-2 hover:text-green-200 transition-colors">Importância</a>
+      <a href="#solutions" class="block py-2 hover:text-green-200 transition-colors">Soluções</a>
+      <a href="#videos" class="block py-2 hover:text-green-200 transition-colors">Vídeos</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-black opacity-20"></div>
+      <div class="parallax-bg absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto text-center px-6 z-10 text-white">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Nosso Planeta, Nossa Responsabilidade</h2>
+      <p class="text-xl md:text-2xl mb-8 animate-fade-in" style="transition-delay: 0.2s;">Alunos: Ayrá Santos & Rafael Quiterio — 2°B — Colégio 24 de Outubro</p>
+      <button id="explore-button" class="bg-white text-green-800 font-semibold py-3 px-8 rounded-full hover:bg-green-100 transition-all transform hover:scale-105 animate-fade-in" style="transition-delay: 0.4s;">
+        Explorar Consciência Ambiental
+      </button>
+    </div>
+    
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <i class="fas fa-chevron-down text-2xl text-white"></i>
+    </div>
+  </section>
+
+  <!-- Introdução -->
+  <section id="intro" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4 animate-fade-in">Bem-vindo ao Futuro Sustentável</h2>
+        <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto animate-fade-in" style="transition-delay: 0.2s;">
+          Em 2025, a consciência ambiental não é mais uma opção, mas uma necessidade urgente para a sobrevivência do nosso planeta.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-green-50 p-8 rounded-2xl shadow-md card-hover animate-fade-in">
+          <div class="text-green-700 text-4xl mb-4">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">O Que é Consciência Ambiental?</h3>
+          <p class="text-gray-700">
+            É o entendimento profundo da importância da natureza para nossa existência e a compreensão do impacto que nossas atividades diárias causam no meio ambiente. Significa refletir sobre como nossas escolhas afetam o planeta, desde o que consumimos até como descartamos nosso lixo.
+          </p>
+        </div>
+        
+        <div class="bg-green-50 p-8 rounded-2xl shadow-md card-hover animate-fade-in" style="transition-delay: 0.2s;">
+          <div class="text-green-700 text-4xl mb-4">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Nova Forma de Pensar</h3>
+          <p class="text-gray-700">
+            Não se trata apenas de reciclar ou economizar água, mas de adotar uma mentalidade que coloca o cuidado com o meio ambiente como prioridade absoluta. É uma transformação cultural que reconhece nossa interdependência com os ecossistemas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 gradient-bg text-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 animate-fade-in">A Realidade em Números</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="stat-card p-6 rounded-2xl text-center animate-fade-in">
+          <div class="text-5xl font-bold mb-3">69%</div>
+          <p>Queda na vida selvagem desde 1970</p>
+        </div>
+        
+        <div class="stat-card p-6 rounded-2xl text-center animate-fade-in" style="transition-delay: 0.2s;">
+          <div class="text-5xl font-bold mb-3">250k</div>
+          <p>Mortes anuais relacionadas às mudanças climáticas (2030-2050)</p>
+        </div>
+        
+        <div class="stat-card p-6 rounded-2xl text-center animate-fade-in" style="transition-delay: 0.4s;">
+          <div class="text-5xl font-bold mb-3">10M</div>
+          <p>Hectares de florestas perdidos anualmente</p>
+        </div>
+      </div>
+      
+      <p class="text-center mt-10 text-green-100 animate-fade-in" style="transition-delay: 0.6s;">
+        Desenvolver a consciência ambiental é fundamental para preservar ecossistemas, proteger a biodiversidade e garantir recursos para futuras gerações.
+      </p>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4 animate-fade-in">Como Fazer a Diferença</h2>
+        <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto animate-fade-in" style="transition-delay: 0.2s;">
+          Pequenas ações individuais somadas criam um impacto coletivo significativo. Comece hoje mesmo!
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="animate-fade-in">
+          <div class="flex items-start mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4">
+              <i class="fas fa-book text-green-700 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Informe-se</h3>
+              <p class="text-gray-600">Documentários, livros e conteúdos ambientais atualizados.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4">
+              <i class="fas fa-recycle text-green-700 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Consumo Consciente</h3>
+              <p class="text-gray-600">Reduza, reutilize e recicle sempre que possível.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4">
+              <i class="fas fa-tint text-green-700 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Economize Recursos</h3>
+              <p class="text-gray-600">Água e energia são bens preciosos que devem ser preservados.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-fade-in" style="transition-delay: 0.2s;">
+          <div class="flex items-start mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4">
+              <i class="fas fa-tree text-green-700 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Reconecte-se</h3>
+              <p class="text-gray-600">Plante árvores ou cultive plantas e reconecte-se com a natureza.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4">
+              <i class="fas fa-users text-green-700 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Iniciativas Coletivas</h3>
+              <p class="text-gray-600">Participe de ações comunitárias e pressione por políticas públicas.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4">
+              <i class="fas fa-globe-americas text-green-700 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg mb-1">Turismo Sustentável</h3>
+              <p class="text-gray-600">Apoie e pratique o turismo que respeita o meio ambiente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vídeos -->
+  <section id="videos" class="py-20 bg-green-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4 animate-fade-in">Aprenda e Compartilhe</h2>
+        <div class="w-20 h-1 bg-green-600 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto animate-fade-in" style="transition-delay: 0.2s;">
+          O conhecimento é a primeira etapa para a transformação. Assista, reflita e compartilhe.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="rounded-2xl overflow-hidden shadow-lg card-hover animate-fade-in">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full" 
+              src="https://www.youtube.com/embed/RQ-C9A5t6dQ"
+              title="Consciência Ambiental - Vídeo 1" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-lg">O que é Consciência Ambiental?</h3>
+            <p class="text-gray-600 text-sm">Entenda o conceito e sua importância</p>
+          </div>
+        </div>
+        
+        <div class="rounded-2xl overflow-hidden shadow-lg card-hover animate-fade-in" style="transition-delay: 0.2s;">
+          <div class="relative pb-[56.25%] h-0">
+            <iframe class="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/tSLNy-9QOPw"
+              title="Consciência Ambiental - Vídeo 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-lg">Como Praticar no Dia a Dia</h3>
+            <p class="text-gray-600 text-sm">Dicas práticas para implementar agora</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 gradient-bg text-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Juntos Podemos Fazer a Diferença</h2>
+      <p class="text-xl mb-8">O futuro do planeta está em nossas mãos. Comece hoje sua jornada de conscientização.</p>
+      <button id="share-button" class="bg-white text-green-800 font-semibold py-3 px-8 rounded-full hover:bg-green-100 transition-all transform hover:scale-105">
+        Compartilhe Esta Ideia
+      </button>
+    </div>
+  </section>
+
+  <!-- Modal de Compartilhamento -->
+  <div class="fixed inset-0 z-50 flex items-center justify-center share-modal" id="share-modal">
+    <div class="fixed inset-0 bg-black bg-opacity-50" id="modal-overlay"></div>
+    <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 z-50 relative">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-bold text-green-800">Compartilhar Esta Ideia</h3>
+        <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      
+      <p class="text-gray-600 mb-6">Ajude a espalhar a consciência ambiental compartilhando este conteúdo!</p>
+      
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <a href="#" class="share-option bg-blue-100 p-4 rounded-lg text-center text-blue-600 hover:bg-blue-200" id="share-facebook">
+          <i class="fab fa-facebook text-2xl mb-2"></i>
+          <p>Facebook</p>
+        </a>
+        
+        <a href="#" class="share-option bg-blue-400 p-4 rounded-lg text-center text-white hover:bg-blue-500" id="share-twitter">
+          <i class="fab fa-twitter text-2xl mb-2"></i>
+          <p>Twitter</p>
+        </a>
+        
+        <a href="#" class="share-option bg-red-100 p-4 rounded-lg text-center text-red-600 hover:bg-red-200" id="share-whatsapp">
+          <i class="fab fa-whatsapp text-2xl mb-2"></i>
+          <p>WhatsApp</p>
+        </a>
+        
+        <a href="#" class="share-option bg-purple-100 p-4 rounded-lg text-center text-purple-600 hover:bg-purple-200" id="share-email">
+          <i class="fas fa-envelope text-2xl mb-2"></i>
+          <p>E-mail</p>
+        </a>
+      </div>
+      
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-2">Ou copie o link:</label>
+        <div class="flex">
+          <input type="text" class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg" id="share-link" value="https://santosxbk.github.io/VerdeAtivo/" readonly>
+          <button class="bg-green-700 text-white px-4 py-2 rounded-r-lg hover:bg-green-800" id="copy-link">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="bg-green-50 p-3 rounded-lg text-green-700 text-sm hidden" id="copy-success">
+        <i class="fas fa-check-circle mr-2"></i> Link copiado para a área de transferência!
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="bg-green-900 text-white py-8">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="mb-2">Trabalho de Consciência Ambiental — Ayrá Santos & Rafael Quiterio — 2°B</p>
+      <p>Colégio 24 de Outubro • 2025</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
